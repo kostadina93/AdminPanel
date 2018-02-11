@@ -1,0 +1,119 @@
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #EB9532;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.content{
+    position: relative;
+    width: auto;
+    margin-left: 250px;
+    height: calc(100vh - 112px);
+    background-color: white;
+    padding: 15px;
+}
+
+h1{
+    display: block;
+    color: #EB9532;
+}
+
+#tblPrint{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #949191;
+    overflow-wrap: break-word;
+    overflow: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    max-height: 90%;
+}
+
+#tblPrint th{
+    text-align: center;
+    background-color: #231356;
+    color: #EB9532;
+    border-bottom: 2px solid #949191;
+    border-top: 1px solid #949191;
+    border-right: 1px solid #949191;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tblPrint tr{
+    cursor: default;
+}
+
+#tblPrint td{
+    text-align: center;
+    border: 1px solid #949191;
+    border-bottom: 2px solid #949191;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tblPrint td#log{
+    text-align: left;
+    word-break: keep-all;
+}
+
+.page-navigation{
+    margin-top: 1%;
+    float: right !important;
+}
+
+.page-navigation a {
+    margin: 10px 0px;
+    display: inline-block;
+    padding: 3px 10px;
+    color: white;
+    background-color: #231356;
+    border: 1px solid white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.page-navigation a[data-selected] {
+    color: #EB9532;
+}
+
+#btnSubmit{
+    margin-top: 1.5%;
+    float: left;
+    background-color: #231356;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+#btnSubmit:hover{
+    color: #EB9532;
+    cursor: pointer;
+}
